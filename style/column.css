@@ -1,0 +1,183 @@
+/* 基础设定 */
+body {
+	font-size: 100%;
+	margin: 0;
+	color: #fff;
+	#overflow: hidden;
+	line-height: 1.4em;
+	background-color: #5C6BC0;
+	font-family: "Microsoft Yahei", 'Hiragino Sans GB', 'Source Han Sans',  sans-serif;
+}
+ul {
+	list-style: none;
+}
+li {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+a:link, a:visited {
+	color: #eee;
+	font-size: .9em;
+	text-decoration: none;	
+}
+/* 单独为黄色区域优化字色显示 */
+section#design a:link,
+section#design a:visited {
+	color: #fefefe;
+}
+li a:link, li a:visited {
+	transition: all .3s ease-out;
+}
+li a:hover {
+	padding-left: 10px;
+	border-left: 5px solid;	
+	font-weight: bolder;
+}
+h2 {
+	font-size: 1.4em;
+	font-family: Menlo, Monaco, Consolas, 'Courier New', Courier, monospace;
+	text-align: center;
+	text-shadow: 3px 3px 7px #111;
+	padding: 15px 0;
+	margin: 0;
+	margin-bottom: 10px;
+}
+h3 {
+	font-size: .8em;
+	text-indent: 14%;
+	padding: 3px 0;
+	margin: 0;
+	transition: background-color .5s linear .2s;
+}
+
+/* 各个列的初始宽度 */
+section.top7 {
+	float: left;
+	width: 14.28%;
+	padding-bottom: 5000px;
+	margin-bottom: -5000px;
+	transition: all .7s ease;
+}
+
+/* red */
+section#develop {
+	background-color: #FF7043;
+}
+section#develop:hover h3 {
+	background-color: #F4511E;
+}
+section#develop:hover a:hover {
+	border-color: #F4511E;
+}
+/* orange */
+section#product {
+	background-color: #FFA726;
+}
+section#product:hover h3 {
+	background-color: #FB8C00;
+}
+section#product:hover a:hover {
+	border-color: #FB8C00;
+}
+/* yellow */	
+section#design {
+	background-color: #FFCA28;
+}
+section#design:hover h3 {
+	background-color: #FFB300;
+}
+section#design:hover a:hover {
+	border-color: #FFB300;
+}
+/* green */
+section#tool {
+	background-color: #66BB6A;
+}
+section#tool:hover h3 {
+	background-color: #43A047;
+}
+section#tool:hover a:hover {
+	border-color: #43A047;
+}
+/* cyan */
+section#social {
+	background-color: #26A69A;
+}
+section#social:hover h3 {
+	background-color: #00897B;
+}
+section#social:hover a:hover {
+	border-color: #00897B;
+}
+/* blue */
+section#media {
+	background-color: #42A5F5;
+}
+section#media:hover h3 {
+	background-color: #1E88E5;
+}
+section#media:hover a:hover {
+	border-color: #1E88E5;
+}
+/* purple */
+section#hobby {
+	background-color: #5C6BC0;
+}
+section#hobby:hover h3 {
+	background-color: #3949AB;
+}
+section#hobby:hover a:hover {
+	border-color: #3949AB;
+}
+
+/* 风格转换条 */
+.switcher {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 999;
+	width: 100%;
+	height: 35px;
+	background-color: black; 
+	opacity: .4;
+	transition: all .7s ease;
+}
+.switcher:hover {	
+	left: 10%;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto; 
+	border-radius: 10px;
+	opacity: .7;
+}
+.switcher span {
+	font: 20px/1.5 Menlo, Monaco, Consolas, 'Courier New', Courier, monospace;
+	text-align: center;
+	padding: 3px;
+	display: block;
+	width: 100%;
+}
+
+/* 每个item的悬停tooltip */
+a[tip] {
+	position: relative;
+}
+a[tip]::after {
+	content: attr(tip);
+	white-space: nowrap; 
+	font-weight: normal;
+	font-size: .8em;
+	line-height: 1.4;
+	visibility: hidden;
+	position: absolute;
+	left: 9em;
+	top: -6px;
+	padding: 5px 8px;
+	border-radius: 7px;
+	color: #eee;
+	background-color: rgba(127, 140, 141, .8);
+}
+a[tip]:hover:after {
+	visibility: visible;	
+}
