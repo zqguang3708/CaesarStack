@@ -6,11 +6,33 @@
 	<link rel="stylesheet" type="text/css" href="style/column.css" />
 	<script src="script/jquery.min.js"></script>
 	<script type="text/javascript">
-		encryption()
-		function encryption() {
-			var pwd = ""
-			while (pwd != "StarShine"){
-				pwd = prompt("请进行人脸识别：","芝麻开门")
+		if (typeof(window.localStorage) != "undefined") {
+			//存在本地存储
+			if (localStorage.getItem("PASSWORD") !=null) {
+				//存在密码
+				var LocalPassword = localStorage.getItem("PASSWORD");
+				if (LocalPassword == "StarShine") {
+					null
+				} else {
+					var UpdatePassword = ""
+					while (UpdatePassword != "StarShine"){
+						UpdatePassword = prompt("请进行人脸识别：","芝麻开门")
+					}
+					localStorage.setItem("PASSWORD", UpdatePassword);
+					alert("欢迎来到秘密基地")
+				}
+			} else {
+				var NewPassword = ""
+				while (NewPassword != "StarShine"){
+					NewPassword = prompt("请进行人脸识别：","芝麻开门")
+				}
+				localStorage.setItem("PASSWORD", NewPassword);
+				alert("欢迎来到秘密基地")
+			}
+		} else {
+			var TempPassword = ""
+			while (TempPassword != "StarShine"){
+				TempPassword = prompt("请进行人脸识别：","芝麻开门")
 			}
 			alert("欢迎来到秘密基地")
 		}
