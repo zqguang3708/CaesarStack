@@ -144,6 +144,15 @@ theme-lou
 theme-seers
 ```
 
+### 比较好的theme
+
+```textile
+beauty
+lou
+aleen42
+comscore
+```
+
 # Write Book
 
 ## 章节配置说明

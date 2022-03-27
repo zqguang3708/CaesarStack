@@ -17,7 +17,7 @@ date: 2022年3月27日17点06分
 
 # git的相关工作区域
 
-<img src="assets/cc0788a75b7297b1554a63c1237f14d3aeb31c32.png" title="" alt="三大区域.png" width="827">
+<img title="" src="./assets/三大区域.png" alt="三大区域.png" width="827">
 
 - 工作区
   
