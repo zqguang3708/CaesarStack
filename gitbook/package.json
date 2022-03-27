@@ -9,6 +9,19 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "gitbook-plugin-search-pro": "^2.0.2"
+    "gitbook-plugin-back-to-top-button": "^0.1.4",
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-expandable-chapters": "^0.2.0",
+    "gitbook-plugin-search-pro": "^2.0.2",
+    "gitbook-plugin-theme-aleen42": "^1.5.0",
+    "gitbook-plugin-theme-beauty": "^1.2.3",
+    "gitbook-plugin-theme-comscore": "0.0.3",
+    "gitbook-plugin-theme-cuav": "^1.1.6",
+    "gitbook-plugin-theme-door": "^1.0.1",
+    "gitbook-plugin-theme-gestalt-yl": "^1.0.27",
+    "gitbook-plugin-theme-het-ycy": "^1.0.5",
+    "gitbook-plugin-theme-jolie": "^1.1.1",
+    "gitbook-plugin-theme-lou": "^1.0.3",
+    "gitbook-plugin-theme-seers": "^1.0.5"
   }
 }
