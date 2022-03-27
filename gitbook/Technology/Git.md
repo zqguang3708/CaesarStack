@@ -1,6 +1,6 @@
 ---
 title: Git
-date: 2022年3月27日17点06分
+date: 2022-03-27 17:06:00
 ---
 
 # <mark>Git：分布式版本控制软件</mark>
@@ -17,7 +17,7 @@ date: 2022年3月27日17点06分
 
 # git的相关工作区域
 
-<img title="" src="./assets/三大区域.png" alt="三大区域.png" width="827">
+![三大区域.png](assets/cc0788a75b7297b1554a63c1237f14d3aeb31c32.png)
 
 - 工作区
   

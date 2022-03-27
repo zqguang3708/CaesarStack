@@ -1,6 +1,6 @@
 ---
 title: Nginx
-date: 2022年3月27日19点13分
+date: 2022-03-27 19:13:00
 ---
 
 # <mark>Nginx</mark>
