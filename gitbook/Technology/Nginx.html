@@ -1,0 +1,354 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Nginx · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Node.js.html" />
+    
+    
+    <link rel="prev" href="GitBook.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    SomeTechnology
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Git.html">
+            
+                <a href="Git.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="GitBook.html">
+            
+                <a href="GitBook.html">
+            
+                    
+                    GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="Nginx.html">
+            
+                <a href="Nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="Node.js.html">
+            
+                <a href="Node.js.html">
+            
+                    
+                    Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Nginx</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="nginx"><mark>Nginx</mark></h1>
+<h1 id="&#x5B98;&#x7F51;">&#x5B98;&#x7F51;</h1>
+<p><a href="http://nginx.org/" target="_blank">Nginx</a></p>
+<p><a href="http://nginx.org/en/docs/windows.html" target="_blank">Nginx&#x5B98;&#x65B9;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</a></p>
+<h1 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h1>
+<p>&#x89E3;&#x538B;&#x5373;&#x53EF;&#x4F7F;&#x7528;&#x3002;</p>
+<h1 id="first-command">FIRST COMMAND</h1>
+<p>&#x67E5;&#x770B;&#x7248;&#x672C;&#xFF1A;</p>
+<pre><code class="lang-bash">nginx -v
+</code></pre>
+<h1 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h1>
+<p>Nginx&#x4F7F;&#x7528;&#x4ED6;&#x8FD0;&#x884C;&#x7684;&#x76EE;&#x5F55;&#x4F5C;&#x4E3A;&#x914D;&#x7F6E;&#x4E2D;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x7684;&#x524D;&#x7F00;&#x3002;</p>
+<h2 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h2>
+<p>&#x5728;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;/conf/nginx.conf&#x6587;&#x4EF6;&#x3002;</p>
+<h3 id="&#x76D1;&#x542C;&#x7AEF;&#x53E3;">&#x76D1;&#x542C;&#x7AEF;&#x53E3;</h3>
+<p>http/server/listen&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#x3002;</p>
+<h3 id="&#x8D1F;&#x8F7D;&#x5747;&#x8861;">&#x8D1F;&#x8F7D;&#x5747;&#x8861;</h3>
+<p>http/server/location/proxy_pass&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;&#x5730;&#x5740;&#x6C60;&#x3002;</p>
+<p>weight&#x662F;&#x5404;&#x670D;&#x52A1;&#x5668;&#x88AB;&#x8BBF;&#x95EE;&#x5230;&#x7684;&#x6743;&#x91CD;&#xFF0C;&#x6570;&#x503C;&#x8D8A;&#x5927;&#x8BBF;&#x95EE;&#x5230;&#x7684;&#x51E0;&#x7387;&#x8D8A;&#x9AD8;&#x3002;</p>
+<h3 id="&#x9759;&#x6001;&#x8D44;&#x6E90;">&#x9759;&#x6001;&#x8D44;&#x6E90;</h3>
+<p>/hhtp/server/location/</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-apacheconf"><span class="hljs-attribute">index</span> index.html
+</code></pre>
+<p>&#x9519;&#x8BEF;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;</p>
+<p>&#x5728;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;/logs/error.log&#x6587;&#x4EF6;&#x3002;</p>
+<h1 id="&#x4F7F;&#x7528;&#x65B9;&#x6CD5;">&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h1>
+<p>&#x8FDB;&#x5165;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x3002;</p>
+<h2 id="&#x5F00;&#x542F;nginx&#x670D;&#x52A1;">&#x5F00;&#x542F;Nginx&#x670D;&#x52A1;</h2>
+<pre><code class="lang-bash">start nginx
+</code></pre>
+<p>&#x5F00;&#x542F;&#x540E;&#x8BBF;&#x95EE;&#x4EE5;&#x4E0B;&#x7F51;&#x5740;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<pre><code class="lang-url">http://localhost
+</code></pre>
+<h2 id="&#x67E5;&#x770B;nginx&#x670D;&#x52A1;">&#x67E5;&#x770B;Nginx&#x670D;&#x52A1;</h2>
+<pre><code class="lang-bash">tasklist /<span class="hljs-keyword">fi</span> <span class="hljs-string">&quot;imagename eq nginx.exe&quot;</span>
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x6709;&#x4E24;&#x4E2A;Nginx&#x8FDB;&#x7A0B;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x4E3B;&#x8FDB;&#x7A0B;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x3002;</p>
+<h2 id="&#x5173;&#x95ED;nginx&#x670D;&#x52A1;">&#x5173;&#x95ED;Nginx&#x670D;&#x52A1;</h2>
+<pre><code class="lang-bash">nginx <span class="hljs-_">-s</span> stop
+nginx <span class="hljs-_">-s</span> quit
+</code></pre>
+<p>&#x524D;&#x8005;&#x662F;&#x5FEB;&#x901F;&#x505C;&#x6B62;&#xFF0C;&#x53EF;&#x80FD;&#x5E76;&#x4E0D;&#x4FDD;&#x5B58;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF1B;&#x540E;&#x8005;&#x662F;&#x5B8C;&#x6574;&#x6709;&#x5E8F;&#x7684;&#x505C;&#x6B62;&#xFF0C;&#x5E76;&#x4FDD;&#x5B58;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;&#x65B0;&#x914D;&#x7F6E;&#x91CD;&#x8F7D;">&#x4F7F;&#x7528;&#x65B0;&#x914D;&#x7F6E;&#x91CD;&#x8F7D;</h2>
+<pre><code class="lang-bash">nginx <span class="hljs-_">-s</span> reload
+</code></pre>
+<h2 id="&#x91CD;&#x5199;log&#x6587;&#x4EF6;">&#x91CD;&#x5199;log&#x6587;&#x4EF6;</h2>
+<pre><code class="lang-bash">nginx <span class="hljs-_">-s</span> reopen
+</code></pre>
+<h1 id="&#x7F3A;&#x9677;">&#x7F3A;&#x9677;</h1>
+<h2 id="&#x591A;&#x526F;&#x672C;&#x542F;&#x52A8;">&#x591A;&#x526F;&#x672C;&#x542F;&#x52A8;</h2>
+<p>&#x5C3D;&#x7BA1;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x591A;&#x4E2A;&#x526F;&#x672C;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x5DE5;&#x4F5C;&#x3002;</p>
+<h2 id="udp&#x76F8;&#x5173;">UDP&#x76F8;&#x5173;</h2>
+<p>&#x4E0D;&#x652F;&#x6301;UDP&#x4EE3;&#x7406;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="GitBook.html" class="navigation navigation-prev " aria-label="Previous page: GitBook">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Node.js.html" class="navigation navigation-next " aria-label="Next page: Node.js">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Nginx","date":"2022年3月27日19点13分","level":"1.2.3","depth":2,"next":{"title":"Node.js","level":"1.2.4","depth":2,"path":"Technology/Node.js.md","ref":"Technology/Node.js.md","articles":[]},"previous":{"title":"GitBook","level":"1.2.2","depth":2,"path":"Technology/GitBook.md","ref":"Technology/GitBook.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Technology/Nginx.md","mtime":"2022-03-27T11:31:36.155Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-27T15:13:22.574Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
