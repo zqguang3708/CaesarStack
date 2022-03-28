@@ -5,13 +5,15 @@ date: 2022-03-27 18:33:00
 
 # <mark>GitBook</mark>
 
+---
+
+# 本地版基本信息
+
 > 有本地版和网页版两种。推荐使用本地版。
 > 
 > > 网页版：[GitBook网页版](htps://www.gitbook.com/)
 > > 
 > > 以下介绍本地版。
-
-# 本地版基本信息
 
 > 本地版依赖node.js，且由于GitBook长期未维护，只能使用v10.21.0及之前的版本。所以推荐使用nvm管理node.js。
 
@@ -91,31 +93,53 @@ npm init
 
 ### 常用插件列举
 
-增强搜索：
+#### 增强搜索
 
 ```bash
 npm install gitbook-plugin-search-pro
 ```
 
-代码框：
+#### 代码框
 
 ```bash
 npm install gitbook-plugin-code
 ```
 
-菜单折叠：
+#### 菜单折叠
 
 ```bash
 npm install gitbook-plugin-expandable-chapters
 ```
 
-返回顶部：
+#### 返回顶部
 
 ```bash
 npm install gitbook-plugin-back-to-top-button
 ```
 
-自定义主题插件：
+#### 自动创建目录
+
+```bash
+npm i gitbook-plugin-toc
+```
+
+这里的目录是指页面内顶端的页内目录，需要在需要插入的地方插入代码：
+
+```md
+<!-- toc -->
+```
+
+注意：因为有些时候会有BUG，且很多时候前端模板可以自动生成，所以弃用。
+
+#### 自动更新SUMMARY文件
+
+```bash
+npm i gitbook-plugin-summary-pro
+```
+
+注意：为了防止出现BUG，在book.json中，这个尽量放在第一个。
+
+#### 自定义主题插件
 
 ```bash
 npm install gitbook-plugin-theme-主题名
@@ -130,6 +154,8 @@ search-pro
 code
 expandable-chapters
 back-to-top-button
+toc
+summary-pro
 theme-主题名
 theme-aleen42
 theme-beauty
@@ -141,6 +167,18 @@ theme-het-ycy
 theme-jolie
 theme-lou
 theme-seers
+```
+
+有一些插件，需要额外的配置，例如`summary-pro`，需要额外在book.json中配置：
+
+```json
+"pluginsConfig": {
+    "summary-pro": {
+        "firstpage": {
+            "title": "SomeTechnology"
+        }
+    }
+},
 ```
 
 ### 比较好的theme
@@ -191,7 +229,9 @@ SUMMARY.md是链接列表文件，名字是章节的名字，链接指向章节�
 
 - 仅打包成HTML静态文件
 
-这两种方法都可以任意选择启动方式
+这两种方法都可以任意选择启动方式。
+
+但是，npm管理方法的扩展性更好，<mark>推荐</mark>这个方法。
 
 ## GitBook管理运行
 
@@ -225,10 +265,12 @@ gitbook build
 
 ```json
 "scripts":{
-    "serve": "gitbook serve",
-    "build": "gitbook build"
+    "serve": "rmdir /S /Q _book && gitbook serve",
+    "build": "rmdir /S /Q _book && gitbook build"
 }
 ```
+
+注意：这里的删除是防止产生冗余干扰。
 
 然后通过以下命令运行：
 
