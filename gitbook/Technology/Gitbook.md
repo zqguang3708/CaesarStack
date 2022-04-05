@@ -307,3 +307,7 @@ server {
     }
 }
 ```
+
+# 他山之石
+
+[插件参考](https://www.cnblogs.com/phyger/p/14035937.html)
