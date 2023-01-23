@@ -1,187 +1,128 @@
-<!--
- * @Author: your name
- * @Date: 2021-03-12 15:21:02
- * @LastEditTime: 2021-03-12 15:58:16
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \canvas颗粒状文本动画特效\index.html
--->
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1.0,maximum-scale=1.0"
-    />
-    <title>炫酷烟花表白</title>
-    <style>
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: black;
-        user-select: none;
-        margin: 0;
-      }
-      .city {
-        width: 100%;
-        position: fixed;
-        bottom: 165px;
-        z-index: 100999;
-      }
-
-      .city img {
-        width: 100%;
-      }
-
-      audio {
-        opacity: 0;
-      }
-      .shape {
-        z-index: 9999 !important;
-      }
-      /* 隐藏烟花 */
-      .fireworks {
-        display: none;
-      }
-    </style>
-    <link rel="stylesheet" href="css/site.min.css" />
-  </head>
-
-  <body>
-    <!-- 开场白 -->
-    <div class="prologue">
-      <canvas class="canvas"></canvas>
-
-      <div class="help">?</div>
-
-      <div class="ui">
-        <input class="ui-input" type="text" />
-        <span class="ui-return">↵</span>
-      </div>
-
-      <div class="overlay">
-        <div class="tabs">
-          <div class="tabs-labels">
-            <span class="tabs-label">Commands</span
-            ><span class="tabs-label">Info</span
-            ><span class="tabs-label">Share</span>
-          </div>
-
-          <div class="tabs-panels">
-            <ul class="tabs-panel commands">
-              <li class="commands-item">
-                <span class="commands-item-title">Text</span
-                ><span class="commands-item-info" data-demo="Hello :)"
-                  >Type anything</span
-                ><span class="commands-item-action">Demo</span>
-              </li>
-              <li class="commands-item">
-                <span class="commands-item-title">Countdown</span
-                ><span class="commands-item-info" data-demo="#countdown 10"
-                  >#countdown<span class="commands-item-mode"
-                    >number</span
-                  ></span
-                ><span class="commands-item-action">Demo</span>
-              </li>
-              <li class="commands-item">
-                <span class="commands-item-title">Icon</span
-                ><span class="commands-item-info" data-demo="#icon thumbs-up"
-                  >#icon<span class="commands-item-mode">name</span>&nbsp;(using
-                  <a
-                    href="https://fortawesome.github.io/Font-Awesome/#icons-new"
-                    target="_blank"
-                    >Font Awesome</a
-                  >)</span
-                ><span class="commands-item-action">Demo</span>
-              </li>
-              <li class="commands-item">
-                <span class="commands-item-title">Time</span
-                ><span class="commands-item-info" data-demo="#time">#time</span
-                ><span class="commands-item-action">Demo</span>
-              </li>
-              <li class="commands-item">
-                <span class="commands-item-title">Rectangle</span
-                ><span class="commands-item-info" data-demo="#rectangle 30x15"
-                  >#rectangle<span class="commands-item-mode"
-                    >width x height</span
-                  ></span
-                ><span class="commands-item-action">Demo</span>
-              </li>
-              <li class="commands-item">
-                <span class="commands-item-title">Circle</span
-                ><span class="commands-item-info" data-demo="#circle 25"
-                  >#circle<span class="commands-item-mode">diameter</span></span
-                ><span class="commands-item-action">Demo</span>
-              </li>
-
-              <li class="commands-item commands-item--gap">
-                <span class="commands-item-title">Animate</span
-                ><span
-                  class="commands-item-info"
-                  data-demo="The time is|#time|#countdown 3|#icon thumbs-up"
-                  ><span class="commands-item-mode">command1</span>&nbsp;|<span
-                    class="commands-item-mode"
-                    >command2</span
-                  ></span
-                >
-                <span class="commands-item-action">Demo</span>
-              </li>
-            </ul>
-          </div>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>秘密 の 基地</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/minireset.css@0.0.3/minireset.min.css" integrity="sha256-rYUTtzummUpBJLuuLnVN9Hy06M9uLlZ8W8VZOyiX2WQ=" crossorigin="anonymous">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js" integrity="sha256-9uAoNWHdszsUDhSXf/rVcWOqKPfi5/8V5R4UdbZle2A=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js" integrity="sha256-nwhzW/P9gnvWMPOm84MK8BzQRRMdi8iutxMuYsYcOgw=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="background-small"></div>
+    <!-- Loading hover -->
+    <div class="loading">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
         </div>
-      </div>
     </div>
-    <!-- 烟花 -->
-    <div class="fireworks">
-      <div class="star comet"></div>
-      <script src="js/index.js"></script>
-      <!--烟花部分-->
-      <canvas
-        id="cas"
-        style="background-color: rgba(0, 5, 24, 1); z-index: 9999"
-      >
-        浏览器不支持canvas
-      </canvas>
-      <!-- 城市背景 -->
-      <div class="city">
-        <img src="img/city.png" alt="" />
-      </div>
-      <img src="img/moon.png" alt="" id="moon" style="visibility: hidden" />
-      <div style="display: none">
-        <div class="shape"><img src="./assets/img/01.png" alt="" /></div>
-        <div class="shape">💘</div>
-        <div class="shape">爱你</div>
-        <div class="shape"><img src="./assets/img/01.png" alt="" /></div>
-        <div class="shape">永远</div>
-        <div class="shape">💘</div>
-        <div class="shape">爱你</div>
-        <div class="shape">宝贝</div>
-        <div class="shape"><img src="./assets/img/02.png" alt="" /></div>
-        <div class="shape">💘💘</div>
-      </div>
-      <!--音乐部分/可替换-->
-     <audio autoplay loop id="music">
-        <source src="mp3/xinnian.mp3" />
-      </audio> -->
-      <iframe
-        id="iframMusic"
-        allow="autoplay"
-        style="display: none"
-        src="mp3/xinnian.mp3"
-      ></iframe>
-    </div>
-    <!-- 烟花js内容S -->
-    <script src="jquery.min.js"></script>
-    <script src="fire.js"></script>
-    <script src="talk.js"></script>
-    <!-- 烟花js内容E -->
-
-    <!-- 开场文字 S -->
-    <script src="js/shape-shifter.js"></script>
-    <!-- 开场文字 E -->
-  </body>
+    <!-- Main box -->
+    <main>
+        <div class="content">
+            <div class="left">
+                <div class="avatar">
+                    <img src="assets/img/logo.jpg">
+                </div>
+                <ul class="menu">
+                    <li>
+                        <a goto="#home">HOME</a>
+                    </li>
+                    <li>
+                        <a href="./webstack.html">CAESARSTACK</a>
+                    </li>
+                    <li>
+                        <a goto="#contact">DELIVERY</a>
+                    </li>
+                    <li>
+                        <a href="./bug.html">BUG</a>
+                    </li>
+                </ul>
+                <div class="copyright">
+                    Made with
+                    <i class="fa fa-heart"></i> by
+                    <br>
+                    <a href="./index.html" target="">StarShine</a>
+                </div>
+            </div>
+			
+            <div class="right">
+                <section id="home" class="active">
+                    <h1> StarShine </h1>
+                    <p>
+                        吾虽 浪迹天涯
+                        <br> 却未迷失 本心
+			    <br>
+			 小陈晨来啦~
+                    </p>
+                </section>
+                <section id="archives">
+                    <h1> StarShine </h1>
+                    <p>
+                        吾虽 浪迹天涯
+                        <br> 却未迷失 本心
+			     <br>
+			 小陈晨来啦~
+                    </p>
+                </section>
+                <section id="contact">
+                    <h1>捕捉方式</h1>
+                    <div class="items">
+                        <a href="./" target="_blank">
+                            <i class="fa fa-home"></i>
+                            <span>Blog</span>
+                        </a>
+                        <a href="./gitbook/index.html" target="_blank">
+                            <i class="fa fa-weibo"></i>
+                            <span>GitBook</span>
+                        </a>
+                        <a href="./" target="_blank">
+                            <i class="fa fa-google-plus"></i>
+                            <span>Google+</span>
+                        </a>
+                        <a href="./" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="./" target="_blank">
+                            <i class="fa fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="./" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                            <span>E-Mail</span>
+                        </a>
+                    </div>
+                </section>
+                <section id="donate">
+                    <h1> StarShine </h1>
+                    <p>
+                        吾虽 浪迹天涯
+                        <br> 却未迷失 本心
+			    <br>
+			 小陈晨来啦~
+			    
+                    </p>
+                </section>
+            </div>
+        </div>
+        <footer>
+            <p id="hitokoto">Loading...</p>
+            <div class="copyright-mobile">
+                Made with
+                <i class="fa fa-heart"></i> by
+                <a href="./index.html" target="">StarShine</a>
+            </div>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
