@@ -1,137 +1,176 @@
-/* 基础设定 */
+@font-face{	/* 大标题 */
+    font-family: 'Gadugi-Bold';
+    src : url('../style/gadugi.ttf');
+}
+@font-face{	/* 小标题 */
+    font-family: 'OPPOSans-M';
+    src : url('../style/OPPOSans-M.ttf');
+}
+@font-face{	/* 内容 */
+    font-family: 'Alibaba-PuHuiTi-Bold';
+    src : url('../style/Alibaba-PuHuiTi-Bold.ttf');
+}
+@font-face{	/* TOP */
+    font-family: 'Privus-Medium';
+    src : url('../style/Privus Medium.otf');
+}
+@font-face{	/* 备用 */
+    font-family: 'FiraCode-Bold';
+    src : url('../style/FiraCode-Bold.ttf');
+}
+
+
+html {
+	width: 100%;
+    height: 100%;
+}
+
 body {
+	width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+	overflow: scroll;	/* 是否允许滚动 */
+	background-color: #3de1ad;
+	
+	font-family: "Alibaba-PuHuiTi-Bold";
 	font-size: 100%;
-	margin: 0;
-	color: #fff;
-	#overflow: hidden;
-	line-height: 1.4em;
-	background-color: #5C6BC0;
-	font-family: "Microsoft Yahei", 'Hiragino Sans GB', 'Source Han Sans',  sans-serif;
+	color: #000000;	/* 字体颜色 */
 }
-ul {
-	list-style: none;
+
+div.Main {
+	width: 100%;
+    height: 100%;
 }
-li {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+
+section.Level-1 {
+	width: 12.5%;	/* 根据个数判断宽度 */
+	height: 100%;
+	float: left;	/* 从左往右排 */
+	transition: all .7s ease;
 }
-a:link, a:visited {
-	color: #eee;
-	font-size: .9em;
-	text-decoration: none;	
-}
-/* 单独为黄色区域优化字色显示 */
-section#design a:link,
-section#design a:visited {
-	color: #fefefe;
-}
-li a:link, li a:visited {
-	transition: all .3s ease-out;
-}
-li a:hover {
-	padding-left: 10px;
-	border-left: 5px solid;	
-	font-weight: bolder;
-}
+
 h2 {
-	font-size: 1.4em;
-	font-family: Menlo, Monaco, Consolas, 'Courier New', Courier, monospace;
+	font-family: "Gadugi-Bold";
+	font-size: 1.6em;
+	color: #FACAC0;
 	text-align: center;
 	text-shadow: 3px 3px 7px #111;
 	padding: 15px 0;
 	margin: 0;
 	margin-bottom: 10px;
 }
+
+
+/* type1 */
+section#type1 {background-color: #D582D3}
+section#type1:hover h3 {background-color: #a9d582}
+section#type1:hover a:hover {border-color: #82d5ae}
+
+/* type2 */
+section#type2 {background-color: #E54B4B}
+section#type2:hover h3 {background-color: #4be598}
+section#type2:hover a:hover {border-color: #4b98e5}
+
+/* type3 */
+section#type3 {background-color: #167C80}
+section#type3:hover h3 {background-color: #801647}
+section#type3:hover a:hover {border-color: #804f16}
+
+/* type4 */
+section#type4 {background-color: #41B65E}
+section#type4:hover h3 {background-color: #9941b6}
+section#type4:hover a:hover {border-color: #b6415e}
+
+/* type5 */
+section#type5 {background-color: #859C3F}
+section#type5:hover h3 {background-color: #3f569c}
+section#type5:hover a:hover {border-color: #853f9c}
+
+/* type6 */
+section#type6 {background-color: #005397}
+section#type6:hover h3 {background-color: #970007}
+section#type6:hover a:hover {border-color: #979000}
+
+/* type7 */
+section#type7 {background-color: #32B67A}
+section#type7:hover h3 {background-color: #b632b0}
+section#type7:hover a:hover {border-color: #b63832}
+
+/* type8 */
+section#type8 {background-color: #817ECD}
+section#type8:hover h3 {background-color: #cda97e}
+section#type8:hover a:hover {border-color: #a3cd7e}
+
+
 h3 {
-	font-size: .8em;
+	font-family: "OPPOSans-M";
+	font-size: 1.1em;
+	color: #e9e7ef;
 	text-indent: 14%;
 	padding: 3px 0;
 	margin: 0;
 	transition: background-color .5s linear .2s;
 }
 
-/* 各个列的初始宽度 */
-section.top7 {
-	float: left;
-	width: 14.28%;
-	padding-bottom: 5000px;
-	margin-bottom: -5000px;
-	transition: all .7s ease;
+section#type8 h3 {
+	color: #66CCFF;
 }
 
-/* red */
-section#develop {
-	background-color: #FF7043;
-}
-section#develop:hover h3 {
-	background-color: #F4511E;
-}
-section#develop:hover a:hover {
-	border-color: #F4511E;
-}
-/* orange */
-section#product {
-	background-color: #FFA726;
-}
-section#product:hover h3 {
-	background-color: #FB8C00;
-}
-section#product:hover a:hover {
-	border-color: #FB8C00;
-}
-/* yellow */	
-section#design {
-	background-color: #FFCA28;
-}
-section#design:hover h3 {
-	background-color: #FFB300;
-}
-section#design:hover a:hover {
-	border-color: #FFB300;
-}
-/* green */
-section#tool {
-	background-color: #66BB6A;
-}
-section#tool:hover h3 {
-	background-color: #43A047;
-}
-section#tool:hover a:hover {
-	border-color: #43A047;
-}
-/* cyan */
-section#social {
-	background-color: #26A69A;
-}
-section#social:hover h3 {
-	background-color: #00897B;
-}
-section#social:hover a:hover {
-	border-color: #00897B;
-}
-/* blue */
-section#media {
-	background-color: #42A5F5;
-}
-section#media:hover h3 {
-	background-color: #1E88E5;
-}
-section#media:hover a:hover {
-	border-color: #1E88E5;
-}
-/* purple */
-section#hobby {
-	background-color: #5C6BC0;
-}
-section#hobby:hover h3 {
-	background-color: #3949AB;
-}
-section#hobby:hover a:hover {
-	border-color: #3949AB;
+ul {
+	# list-style: circle;	/* 列表样式 */
 }
 
-/* 风格转换条 */
+
+li {
+	white-space: nowrap;	/* 文本不换行 */
+	text-overflow: ellipsis;	/* 文本溢出时使用省略号 */
+	overflow: hidden; 		/* 是否允许滚动 */	
+}
+
+
+a:link, a:visited {
+	font-family: "Alibaba-PuHuiTi-Bold";
+	color: #fbda41;
+	font-size: .9em;
+	text-decoration: none;	
+}
+
+li a:link, li a:visited {
+	transition: all .3s ease-out;
+}
+
+li a:hover {
+	padding-left: 10px;
+	border-left: 5px solid;	
+	font-weight: bolder;
+}
+
+a[tip] {
+	position: relative;
+}
+
+a[tip]::after {
+	content: attr(tip);
+	white-space: nowrap; 
+	font-weight: normal;
+	font-size: .8em;
+	line-height: 1.4;
+	visibility: hidden;
+	position: absolute;
+	left: 9em;
+	top: -6px;
+	padding: 5px 8px;
+	border-radius: 7px;
+	color: #eee;
+	background-color: rgba(127, 140, 141, .8);
+}
+
+a[tip]:hover:after {
+	visibility: visible;	
+}
+
+/* TOP */
 .switcher {
 	position: fixed;
 	left: 0;
@@ -152,32 +191,12 @@ section#hobby:hover a:hover {
 	opacity: .7;
 }
 .switcher span {
-	font: 20px/1.5 Menlo, Monaco, Consolas, 'Courier New', Courier, monospace;
+	font-family: "Privus-Medium";
+	font-size: 30px;
+	color: #ff8936;
 	text-align: center;
-	padding: 3px;
+	line-height: 1;
 	display: block;
 	width: 100%;
-}
-
-/* 每个item的悬停tooltip */
-a[tip] {
-	position: relative;
-}
-a[tip]::after {
-	content: attr(tip);
-	white-space: nowrap; 
-	font-weight: normal;
-	font-size: .8em;
-	line-height: 1.4;
-	visibility: hidden;
-	position: absolute;
-	left: 9em;
-	top: -6px;
-	padding: 5px 8px;
-	border-radius: 7px;
-	color: #eee;
-	background-color: rgba(127, 140, 141, .8);
-}
-a[tip]:hover:after {
-	visibility: visible;	
+	padding: 3px;
 }
