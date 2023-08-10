@@ -22,12 +22,12 @@
 
 html {
 	width: 100%;
-    height: 100%;
+    # height: 100%;
 }
 
 body {
 	width: 100%;
-    height: 100%;
+    # height: 100%;
     padding: 0;
     margin: 0;
 	overflow: scroll;	/* 是否允许滚动 */
@@ -40,12 +40,12 @@ body {
 
 div.Main {
 	width: 100%;
-    height: 100%;
+    # height: 100%;
 }
 
 section.Level-1 {
 	width: 12.5%;	/* 根据个数判断宽度 */
-	height: 100%;
+	# height: 100%;
 	float: left;	/* 从左往右排 */
 	transition: all .7s ease;
 }
@@ -175,7 +175,7 @@ a[tip]:hover:after {
 	position: fixed;
 	left: 0;
 	bottom: 0;
-	z-index: 999;
+	z-index: -1;
 	width: 100%;
 	height: 35px;
 	background-color: black; 
@@ -194,9 +194,9 @@ a[tip]:hover:after {
 	font-family: "Privus-Medium";
 	font-size: 30px;
 	color: #ff8936;
-	text-align: center;
+	text-align: right;
 	line-height: 1;
 	display: block;
-	width: 100%;
+	width: 80%;
 	padding: 3px;
 }
