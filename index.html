@@ -11,6 +11,38 @@
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js" integrity="sha256-9uAoNWHdszsUDhSXf/rVcWOqKPfi5/8V5R4UdbZle2A=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js" integrity="sha256-nwhzW/P9gnvWMPOm84MK8BzQRRMdi8iutxMuYsYcOgw=" crossorigin="anonymous"></script>
     <![endif]-->
+    <script type="text/javascript">
+		if (typeof(window.localStorage) != "undefined") {
+			//存在本地存储
+			if (localStorage.getItem("PASSWORD") !=null) {
+				//存在密码
+				var LocalPassword = localStorage.getItem("PASSWORD");
+				if (LocalPassword == "StarShine") {
+					null
+				} else {
+					var UpdatePassword = ""
+					while (UpdatePassword != "StarShine"){
+						UpdatePassword = prompt("请进行人脸识别：","芝麻开门")
+					}
+					localStorage.setItem("PASSWORD", UpdatePassword);
+					alert("欢迎来到秘密基地")
+				}
+			} else {
+				var NewPassword = ""
+				while (NewPassword != "StarShine"){
+					NewPassword = prompt("请进行人脸识别：","芝麻开门")
+				}
+				localStorage.setItem("PASSWORD", NewPassword);
+				alert("欢迎来到秘密基地")
+			}
+		} else {
+			var TempPassword = ""
+			while (TempPassword != "StarShine"){
+				TempPassword = prompt("请进行人脸识别：","芝麻开门")
+			}
+			alert("欢迎来到秘密基地")
+		}
+	</script>
 </head>
 <body>
     <div id="background-small"></div>
